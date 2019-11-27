@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html><head>
+<!--VERSÃO 1.0.0 by V. Thomazi-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>LabsForm</title>
+<link rel="stylesheet" type="text/css" href="jquery.mobile.flatui.css">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery.mobile-1.3.2.min.js"></script>
+
+<script src="formlabs.js"></script>
+<style>
+
+el {
+    color:#60676F;
+}
+
+em {
+    color:#9AA1A8;
+	text-align:left;
+    font-style:italic;
+}
+
+ef {
+    color:#60676F;
+    /*color:#9AA1A8;*/
+	font-style:italic;
+}
+
+tg {
+    font-size:120%;
+	font-weight:bold;
+}
+
+tp {
+    color:252627;
+}
+
+#cookie {
+   position: absolute;
+   bottom: 50px;
+   width:100%
+}
+
+
+[data-role=footer] {
+  data-theme:"d";
+}
+
+data-theme="d"
+
+<!--lidando com colunas-->
+
+body { max-width: 800px;}
+[data-role=content] { max-width: 800px; margin: 0 auto;}
+
+<!--cria os ícones da navbar-->
+
+.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+
+.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -3px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+
+	#prescrever .ui-icon { background:  url(documento_p.png) 50% 50% no-repeat; background-size: 24px 22px; }
+	#infomeds .ui-icon { background:  url(documento_i.png) 50% 50% no-repeat; background-size: 24px 22px; }
+	#dicas .ui-icon { background:  url(documento_d.png) 50% 50% no-repeat; background-size: 24px 22px; }
+	#receita .ui-icon { background:  url(documento_r.png) 50% 50% no-repeat; background-size: 24px 22px; }
+
+<!--cor de radios selecionados-->
+
+.radio-toolbar label {
+    background-color:#ddd;
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color:#E0E0E0;
+}
+
+.checkbox-toolbar label {
+    background-color:#ddd;
+}
+
+.checkbox-toolbar input[type="checkbox"]:checked + label {
+    background-color:#E0E0E0;
+}
+
+.inline-div {
+    display:inline-block;
+}
+.inline-txtarea {
+    resize: none;
+    border : 2px solid red;
+	/*height:200px;*/
+}
+
+textarea[name=inputtxt] {
+  resize: none;
+  height: 50px !important;
+    max-height: 50px !important;
+    overflow:auto !important;
+}
+
+</style>
+
+
+</head>
+
+<body onload="continuar_bt();">
+
+<div data-role="page" id="page">
+
+  <div data-role="header" data-id="header1" data-position="fixed" data-tap-toggle="false"  data-theme="d">
+    <h1>LabsForm</h1>
+  </div>
+
+
+  <div data-role="content">
+
+  <a href="" data-role="button" onClick="formatar2()">Formatar</a>
+
+<center>
+<div class="inline-div">
+    <p align="center">Na intranet: <i>control+A</i> e <i>control+C</i>; depois <i>control+V</i> no campo abaixo:</p>
+    <textarea cols="80" rows="15" class="inline-txtarea" name="inputtxt" id="inputtxt" placeholder="Control+V aqui."></textarea>
+</div>
+
+<div class="inline-div">
+    <p align="center"><em>Resultado:</em></p>
+    <textarea cols="80" rows="10" class="inline-txtarea" name="resultado" id="resultado"></textarea>
+
+    <p align="center"><tg>ATENÇÃO!</tg></p>
+    <p align="left"><ef>-Sempre revise se todos os exames e resultados estão incluídos acima;
+    <br>-Sempre confira se todos os valores estão corretos e incluídos;
+    <br>-Lembre-se: uma evolução adequada é sua responsabilidade: revise!
+    <br>-Envie sugestões e erros que encontrar para anexoapp@gmail.com</ef></p>
+
+</div>
+</center>
+
+
+  </div>
+
+  <div data-role="footer" data-id="foo1" data-position="fixed" data-tap-toggle="false" data-theme="d">
+    <h4></h4>
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>
